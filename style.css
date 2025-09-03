@@ -1,0 +1,131 @@
+body {
+    background-color: #494f88;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    color: azure;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto; 
+    color:#e0e0e0;
+}
+
+#cityName {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    flex: 1;
+    color: #333;
+}
+
+button {
+    border: none;
+    background-color: azure;
+    border-radius: 0 18px 18px 0;
+    cursor: pointer;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+button img {
+    width: 20px;
+    height: 20px;
+}
+
+.weather-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 15px;
+    width: 500px;
+    max-width: 90%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    margin-top: 20px;
+    color: #000;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.weather-card.day {
+    background-color: #fff8e1;
+    color: #333;
+}
+
+.weather-card.night {
+    background-color: #0d1b2a;
+    color: #fff;
+}
+
+.weather-left, .weather-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.weather-left h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+
+.weather-left p, .weather-right p {
+    margin: 6px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.weather-right img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.weather-right p img, .weather-left p img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+@media screen and (max-width: 600px) {
+    .weather-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .weather-left, .weather-right {
+        align-items: center;
+    }
+    .weather-left p, .weather-right p {
+        justify-content: center;
+    }
+    .weather-right img {
+        width: 80px;
+        height: 80px;
+    }
+}
